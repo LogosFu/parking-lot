@@ -14,12 +14,16 @@ public class ParkingLot {
   }
 
   public Ticket parking(Car car) {
-    if (parkingSpace.size() >= this.size) {
+    if (!hasSpace()) {
       throw new NoSpaceException();
     }
     Ticket ticket = new Ticket();
     parkingSpace.put(ticket, car);
     return ticket;
+  }
+
+  public boolean hasSpace() {
+    return parkingSpace.size() < this.size;
   }
 
   public Car pickUp(Ticket ticket) {
