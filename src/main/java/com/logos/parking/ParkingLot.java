@@ -1,6 +1,7 @@
 package com.logos.parking;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 public class ParkingLot {
 
@@ -22,6 +23,7 @@ public class ParkingLot {
   }
 
   public Car pickUp(Ticket ticket) {
-    return parkingSpace.get(ticket);
+    Optional<Car> car = Optional.ofNullable(parkingSpace.get(ticket));
+    return car.orElseThrow(NoThoseCarException::new);
   }
 }

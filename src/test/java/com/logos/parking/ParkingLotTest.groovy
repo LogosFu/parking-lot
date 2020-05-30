@@ -36,4 +36,16 @@ class ParkingLotTest extends Specification {
         then:
         car == pickUpCar
     }
+
+    def "should throw NoThoseCarException when pick up given parking lot not parked those car"() {
+        given:
+        def parkedLot = new ParkingLot(1)
+        def car = new Car()
+        def ticket = parkedLot.parking(car)
+        def otherLot = new ParkingLot(1)
+        when:
+        otherLot.pickUp(ticket)
+        then:
+        thrown(NoThoseCarException)
+    }
 }
