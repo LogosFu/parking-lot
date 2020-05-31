@@ -25,7 +25,7 @@ class ParkingBoyTest extends Specification {
         pickUp == carToParking
     }
 
-    def "ld throw NoSpaceException when parking given a car and boy with 3 full lot"() {
+    def "should throw NoSpaceException when parking given a car and boy with 3 full lot"() {
         given:
         def boy = new ParkingBoy([buildFullParkingLot(), buildFullParkingLot(), buildFullParkingLot()])
         def car = new Car()

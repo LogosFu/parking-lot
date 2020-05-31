@@ -28,6 +28,10 @@ public class ParkingLot {
     return parkingSpace.size() < this.size;
   }
 
+  public int vacancy() {
+    return this.size - parkingSpace.size();
+  }
+
   public Car pickUp(Ticket ticket) {
     Optional<Car> car = Optional.ofNullable(parkingSpace.get(ticket));
     return car.orElseThrow(NoThoseCarException::new);
