@@ -1,9 +1,9 @@
-package com.logos.parking.boy
+package com.logos.parking.domain.boy
 
-import com.logos.parking.Car
-import com.logos.parking.NoSpaceException
-import com.logos.parking.NoThoseCarException
-import com.logos.parking.ParkingLot
+import com.logos.parking.domain.Car
+import com.logos.parking.exception.NoSpaceException
+import com.logos.parking.exception.NoThoseCarException
+import com.logos.parking.domain.ParkingLot
 import spock.lang.Specification
 
 class ParkingBoyTest extends Specification {

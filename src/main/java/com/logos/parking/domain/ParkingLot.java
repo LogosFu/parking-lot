@@ -1,5 +1,7 @@
-package com.logos.parking;
+package com.logos.parking.domain;
 
+import com.logos.parking.exception.NoSpaceException;
+import com.logos.parking.exception.NoThoseCarException;
 import java.util.HashMap;
 import java.util.Optional;
 
