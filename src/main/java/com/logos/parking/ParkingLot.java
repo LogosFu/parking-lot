@@ -30,4 +30,8 @@ public class ParkingLot {
     Optional<Car> car = Optional.ofNullable(parkingSpace.get(ticket));
     return car.orElseThrow(NoThoseCarException::new);
   }
+
+  public Optional<Car> pickUpByBoy(Ticket ticket) {
+    return Optional.ofNullable(parkingSpace.get(ticket));
+  }
 }
